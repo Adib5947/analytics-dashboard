@@ -3,20 +3,22 @@
 import { Menu, Bell } from "lucide-react";
 
 type HeaderProps = {
-  onMenuClick: () => void;
+  onMenuClick?: () => void; // ✅ optional
 };
 
 export default function Header({ onMenuClick }: HeaderProps) {
   return (
     <header className="flex items-center justify-between bg-[#0b1220] px-6 py-4 border-b border-gray-800">
       <div className="flex items-center gap-3">
-        {/* Mobile menu button */}
-        <button
-          onClick={onMenuClick}
-          className="lg:hidden p-2 rounded-md hover:bg-gray-800 transition"
-        >
-          <Menu size={20} />
-        </button>
+        {/* Mobile menu button (only renders if prop exists) */}
+        {onMenuClick && (
+          <button
+            onClick={onMenuClick}
+            className="lg:hidden p-2 rounded-md hover:bg-gray-800 transition"
+          >
+            <Menu size={20} />
+          </button>
+        )}
 
         <h1 className="text-lg font-semibold">Dashboard Overview</h1>
       </div>
