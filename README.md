@@ -8,7 +8,7 @@ This project was developed as part of a frontend technical assignment to demonst
 
 ## Live Demo
 
-Live URL: _To be added after deployment_
+🔗 https://analytics-dashboard-31kg.vercel.app
 
 ---
 
@@ -21,8 +21,17 @@ Live URL: _To be added after deployment_
 - **State Management:** Zustand
 - **Data Handling:** Static JSON (mocked data)
 - **Package Manager:** npm
+- **Deployment:** Vercel
 
 ---
+
+## Setup Instructions
+
+To run the project locally:
+
+```bash
+npm install
+npm run dev
 
 ## Features
 
@@ -32,7 +41,7 @@ Live URL: _To be added after deployment_
 - Responsive layout for desktop, tablet, and mobile
 
 ### Analytics Overview
-- KPI cards with growth indicators
+- KPI cards with growth indicators:
   - Total Revenue
   - Total Users
   - Orders
@@ -42,12 +51,13 @@ Live URL: _To be added after deployment_
 ### Charts & Visualizations
 - **Revenue Over Time** – Line Chart
 - **Orders Per Month** – Bar Chart
-- **User Distribution** – Pie Chart (Free, Premium, Enterprise)
+- **User Distribution** – Pie Chart
+- **Traffic Sources** – Horizontal Bar Chart
 - Interactive tooltips and responsive containers
 
 ### Filters & State Management
 - Date range filter (Last 7 days / 30 days / 12 months)
-- User type filter (All, Free, Premium, Enterprise)
+- User type filter (All users)
 - Global state handled using Zustand
 
 ### UI / UX
@@ -56,7 +66,46 @@ Live URL: _To be added after deployment_
 - Responsive grid system
 - Hover effects and smooth interactions
 
----
+### Project Structures
+src/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+│   ├── Sidebar.tsx
+│   ├── Header.tsx
+│   ├── KpiCard.tsx
+│   ├── RevenueLineChart.tsx
+│   ├── OrdersBarChart.tsx
+│   ├── UserPieChart.tsx
+│   ├── TrafficSourceChart.tsx
+│   ├── Filters.tsx
+│   ├── SkeletonCard.tsx
+│   └── SkeletonChart.tsx
+├── data/
+│   └── chartData.ts
 
-## Project Structure
+### Architecture Decisions
+- App Router (Next.js): Used for modern routing and layout composition.
+- Component-Based Design: Each dashboard section is modular and reusable.
+- Zustand for State: Lightweight global state management for filters and shared UI state.
+- Static Mock Data: Used to focus on UI, state handling, and visualization logic.
+- Tailwind CSS: Enables rapid styling with consistent design tokens.
 
+Assumptions
+- Dashboard uses mocked static data (no backend API).
+- Authentication and role-based access are not implemented.
+- The focus is on frontend architecture, UI quality, and data visualization.
+
+Authentication
+- Authentication is not implemented.
+- No test credentials are required.
+
+Author
+Adib Ahmed
+Frontend Developer
+GitHub: https://github.com/Adib5947
+
+License
+This project is for educational and evaluation purposes.
