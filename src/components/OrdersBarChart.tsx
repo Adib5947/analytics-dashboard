@@ -33,7 +33,6 @@ export default function OrdersBarChart() {
           <XAxis dataKey="month" stroke="#94a3b8" />
           <YAxis stroke="#94a3b8" />
 
-          {/* ✅ Remove white hover background */}
           <Tooltip
             cursor={{ fill: "transparent" }}
             contentStyle={{
@@ -46,7 +45,6 @@ export default function OrdersBarChart() {
             labelStyle={{ color: "#86efac" }}
           />
 
-          {/* ✅ Glow ONLY the active green bar */}
           <Bar
             dataKey="orders"
             fill="#22C55E"

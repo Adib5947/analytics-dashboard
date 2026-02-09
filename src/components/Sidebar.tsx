@@ -12,7 +12,7 @@ const navItems = ["Dashboard", "Users", "Orders", "Settings"];
 export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
   return (
     <>
-      {/* Mobile overlay */}
+
       {onClose && isOpen && (
         <div
           onClick={onClose}
@@ -27,13 +27,13 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
           onClose ? (isOpen ? "translate-x-0" : "-translate-x-full") : ""
         )}
       >
-        {/* Logo */}
+
         <h2 className="text-xl font-bold mb-8 tracking-tight">
           <span className="text-white">Appify</span>
           <span className="text-blue-500">Devs</span>
         </h2>
 
-        {/* Navigation */}
+
         <nav className="space-y-3">
           {navItems.map((item) => (
             <a

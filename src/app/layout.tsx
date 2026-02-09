@@ -11,15 +11,14 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-black text-white">
         <div className="flex h-screen overflow-hidden">
-          {/* Sidebar */}
+
           <Sidebar />
 
-          {/* Right side */}
+
           <div className="flex flex-1 flex-col overflow-hidden">
-            {/* Header */}
+
             <Header />
 
-            {/* Scrollable content panel */}
             <main
               className="
                 flex-1
@@ -30,7 +29,6 @@ export default function RootLayout({
             >
               {children}
 
-              {/* Footer */}
               <footer className="mt-12 pb-6 text-xs text-gray-500">
                 © 2026 AppifyDevs
               </footer>

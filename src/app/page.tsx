@@ -24,7 +24,7 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-10">
-      {/* Page Header */}
+
       <div>
         <h1 className="text-3xl font-bold">Analytics Dashboard</h1>
         <p className="mt-2 text-gray-400">
@@ -32,10 +32,10 @@ export default function DashboardPage() {
         </p>
       </div>
 
-      {/* Filters */}
+
       {!loading && <Filters />}
 
-      {/* KPI Section */}
+
       <section className="space-y-4">
         <h2 className="text-lg font-semibold text-gray-300">
           Key Metrics
@@ -57,7 +57,7 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      {/* Performance Charts */}
+
       <section className="space-y-4">
         <h2 className="text-lg font-semibold text-gray-300">
           Performance Overview
@@ -78,7 +78,7 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      {/* Users & Traffic Sources */}
+
       <section className="space-y-4">
         <h2 className="text-lg font-semibold text-gray-300">
           Users & Traffic Sources

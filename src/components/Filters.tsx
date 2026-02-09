@@ -16,7 +16,7 @@ export default function Filters() {
 
   return (
     <div className="flex flex-wrap gap-4 items-center mb-6">
-      {/* Date Range */}
+
       <select
         value={dateRange}
         onChange={(e) =>
@@ -29,7 +29,7 @@ export default function Filters() {
         <option value="12m">Last 12 Months</option>
       </select>
 
-      {/* User Type */}
+
       <select
         value={userType}
         onChange={(e) =>

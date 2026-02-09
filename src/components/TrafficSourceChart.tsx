@@ -20,7 +20,7 @@ export default function TrafficSourceChart() {
           <XAxis type="number" stroke="#94a3b8" />
           <YAxis dataKey="name" type="category" stroke="#94a3b8" />
 
-          {/* ✅ FIX: remove white background */}
+
           <Tooltip
             cursor={false}
             contentStyle={{
@@ -31,7 +31,7 @@ export default function TrafficSourceChart() {
             }}
           />
 
-          {/* ✅ Glow only the bar */}
+
           <Bar
             dataKey="value"
             radius={[0, 6, 6, 0]}
